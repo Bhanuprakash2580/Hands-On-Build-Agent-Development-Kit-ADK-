@@ -1,192 +1,258 @@
-# 🚀 Agent Development Kit (ADK) Project  
-**Multi-Agent AI System using Gemini 2.5 Flash on Vertex AI**
+# 🤖 Hands-On: Agent Development Kit (ADK)
+### Multi-Agent AI System · Gemini 2.5 Flash · Vertex AI · Google Cloud
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Google%20Cloud-ADK-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini-2.5%20Flash-8E44AD?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vertex%20AI-Enabled-34A853?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
+</p>
 
 ---
 
 ## 📌 Overview
 
-This project demonstrates building and running **AI agents** using the **Google Cloud Agent Development Kit (ADK)** with **Gemini 2.5 Flash** on Vertex AI.  
+This project demonstrates building and running **production-ready AI agents** using the **Google Cloud Agent Development Kit (ADK)** powered by **Gemini 2.5 Flash** on Vertex AI.
 
-It includes:
+ADK is a modular framework that lets you compose specialized agents into hierarchies, equip them with tools, and orchestrate workflows using both predictable pipelines and dynamic LLM-driven routing.
 
-- 🔎 Google Search-powered agent (RAG-based)  
-- 🧠 Python agent with structured output  
-- 🔁 Multi-agent system for fact-checking and correction  
+> ✅ Completed as part of **Google Cloud GENAI104** — *Get Started with Agent Development Kit (ADK)*
 
 ---
 
-## 📸 Screenshots & Demo
+## 🏗️ Project Structure
+
+```
+adk_project/
+├── my_google_search_agent/       # Real-time RAG agent with Google Search
+│   ├── __init__.py
+│   └── agent.py
+│
+├── app_agent/                    # Programmatic agent with structured output
+│   ├── __init__.py
+│   └── agent.py
+│
+├── llm_auditor/                  # Multi-agent fact-checking system
+│   ├── __init__.py
+│   ├── agent.py
+│   └── sub_agents/
+│       ├── critic_agent/         # Automated fact-checker
+│       └── reviser_agent/        # Corrects inaccurate responses
+│
+└── requirements.txt
+```
 
 ---
+
+## 🤖 Agents at a Glance
+
+| Agent | Type | Description |
+|-------|------|-------------|
+| `my_google_search_agent` | LLM + Tool | Real-time Google Search (RAG-based) |
+| `app_agent` | LLM + Schema | Structured JSON output via Pydantic |
+| `llm_auditor` | Multi-Agent | Fact-checking & correction pipeline |
+
+---
+
+## ✨ Key Features
+
+- 🔎 **Real-Time RAG** — Google Search tool integration for grounded, up-to-date responses
+- 🧠 **Structured Outputs** — Pydantic schemas enforce typed, predictable JSON responses
+- 🔁 **Multi-Agent Orchestration** — `SequentialAgent` pipelines for automated critic → reviser workflows
+- 🖥️ **Three Execution Modes** — Browser UI, Python script, and CLI chat interface
+- 🔍 **Execution Tracing** — Step-by-step debugging of tool calls and agent interactions
+- ☁️ **Vertex AI Auth** — Seamless authentication without API keys
+
+---
+
+## 📸 Screenshots
 
 ### 🏗️ Project Structure (VS Code)
-
-Shows organized project folders and modular agent design.
+> Organized project folders with modular agent design
 
 ![Project Structure](assets/project-structure.png)
 
 ---
 
 ### 🖥️ ADK Web UI Dashboard
-
-Interactive interface to run and monitor agents.
+> Interactive interface to run, monitor, and inspect agents
 
 ![Web UI](assets/web-ui.png)
 
 ---
 
-### 🔎 Google Search Agent (Real-Time RAG)
-
-Demonstrates tool usage with live data retrieval and suggestions.
+### 🔎 Google Search Agent — Real-Time RAG
+> Tool usage with live data retrieval and search suggestions
 
 ![Search Agent](assets/search-agent.png)
 
 ---
 
 ### 📊 Execution Trace View
+> Internal execution flow for debugging latency and tool calls
 
-Displays internal execution flow and debugging insights.
-
-![Trace](assets/trace.png)
+![Trace](assets/execution-trace.png)
 
 ---
 
 ### 💻 CLI Chat Interface
-
-Run agents directly from terminal for quick interaction.
+> Quick agent interaction directly from the terminal
 
 ![CLI](assets/cli.png)
 
 ---
 
-### 🐍 Python Agent Execution Output
-
-Programmatic execution with structured JSON output.
+### 🐍 Python Agent — Structured Output
+> Programmatic execution returning typed JSON via Pydantic schema
 
 ![Python Output](assets/python-output.png)
 
 ---
 
-### 🔁 Multi-Agent System (LLM Auditor)
+### 🔁 Multi-Agent System — LLM Auditor
+> `critic_agent` detects errors · `reviser_agent` corrects output
 
-Fact-checking system using multiple agents:
-
-- `critic_agent` → detects errors  
-- `reviser_agent` → corrects output  
-
-![Multi Agent](assets/multi-agent.png)
+![Multi Agent](assets/multi-agent-output.png)
 
 ---
 
-### 🔄 Agent Workflow / Graph Visualization
-
-Visual representation of agent interaction and execution flow.
+### 🔄 Agent Workflow Graph
+> Visual representation of agent interactions and execution flow
 
 ![Agent Graph](assets/agent-graph.png)
 
 ---
 
-## 🏗️ Project Structure
-adk_project/
-├── my_google_search_agent/
-├── app_agent/
-├── llm_auditor/
-└── requirements.txt
-
-
----
-
 ## ⚙️ Prerequisites
 
-- Python 3.9+  
-- Google Cloud account  
-- Vertex AI enabled  
+- Python 3.9+
+- Google Cloud account with **Vertex AI API enabled**
+- `gcloud` CLI authenticated
 
 ---
 
-## 🔧 Setup Instructions
+## 🔧 Setup & Installation
 
-### 1️⃣ Clone Repo
+### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Bhanuprakash2580/Hands-On-Build-Agent-Development-Kit-ADK-
 cd adk_project
+```
 
+### 2. Install Dependencies
+
+```bash
 pip install --upgrade pip
 pip install google-adk -r requirements.txt
+```
 
+### 3. Configure Environment Variables
+
+```bash
 export GOOGLE_GENAI_USE_VERTEXAI=TRUE
 export GOOGLE_CLOUD_PROJECT=<your-project-id>
 export GOOGLE_CLOUD_LOCATION=global
 export MODEL=gemini-2.5-flash
-
-adk web
-Open: http://127.0.0.1:8000
-
-adk run my_google_search_agent
-
-python3 app_agent/agent.py
-
 ```
 
-🤖 Agents
-Agent	Description
-Search Agent	Real-time Google Search (RAG)
-App Agent	Structured Python output
-LLM Auditor	Multi-agent fact-checking
+Or create a `.env` file inside each agent's directory:
 
-
-🚀 Key Highlights
-
-✅ Multi-agent architecture
-
-✅ Tool integration (Google Search)
-
-✅ Structured outputs (Pydantic)
-
-✅ Debugging via execution trace
-
-✅ Runs via UI, CLI, and Python
-
-🏁 Conclusion
-
-This project showcases:
-
-Building scalable AI systems
-
-Multi-agent collaboration
-
-Real-time data integration
-
-Production-style workflows
-
-
-👨‍💻 Author
-
-SURAM BHANU PRAKASH
-GitHub: https://github.com/Hands-On-Build-](https://github.com/Bhanuprakash2580/Hands-On-Build-Agent-Development-Kit-ADK-
-
+```env
+GOOGLE_GENAI_USE_VERTEXAI=TRUE
+GOOGLE_CLOUD_PROJECT=<your-project-id>
+GOOGLE_CLOUD_LOCATION=global
+MODEL=gemini-2.5-flash
+```
 
 ---
 
-# 🔥 Important (Do This Before Upload)
-screenshots
+## 🚀 Running the Agents
 
-project-structure.png
-<img width="2542" height="1345" alt="Screenshot 2026-03-18 155928" src="https://github.com/user-attachments/assets/54b0c2fc-1573-4f05-901e-21c166a746bf" />
-web-ui.png
-<img width="2559" height="1348" alt="Screenshot 2026-03-18 160014" src="https://github.com/user-attachments/assets/e8b382fd-98eb-495a-bc9b-2165bc41a024" />
-cli-search-agent.png
-<img width="2559" height="1356" alt="Screenshot 2026-03-18 160247" src="https://github.com/user-attachments/assets/ab088d7a-2383-4252-87f1-f5b577431710" />
-python-agent-code.png
-<img width="2559" height="1212" alt="Screenshot 2026-03-18 160430" src="https://github.com/user-attachments/assets/d94f9822-d79f-4705-9f56-3ebd32d8b31e" />
-python-output.png
-<img width="2559" height="1349" alt="Screenshot 2026-03-18 160502" src="https://github.com/user-attachments/assets/24d24744-2397-4592-9e20-2dd24357d14c" />
-multi-agent-output.png
-<img width="2559" height="1354" alt="Screenshot 2026-03-18 160614" src="https://github.com/user-attachments/assets/82847800-cb61-419f-83d2-a244ab7a43b5" />
-agent-graph.png
-<img width="850" height="1340" alt="Screenshot 2026-03-18 160731" src="https://github.com/user-attachments/assets/83d49668-4482-4025-803e-5b262fd70d4b" />
-execution-trace.png
-<img width="847" height="1365" alt="Screenshot 2026-03-18 160749" src="https://github.com/user-attachments/assets/835e0df8-c18b-4873-a0b7-d6e8e7d1740d" />
-request-response.png
-<img width="842" height="1354" alt="Screenshot 2026-03-18 160759" src="https://github.com/user-attachments/assets/5e5ef9ac-ca56-4a50-a2f8-98a076c46a63" />
+### 🖥️ Browser UI (Recommended for testing & debugging)
+
+```bash
+adk web
+```
+Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+### 💻 CLI Chat Interface
+
+```bash
+adk run my_google_search_agent
+```
+
+---
+
+### 🐍 Python Script (Programmatic execution)
+
+```bash
+python3 app_agent/agent.py
+```
+
+---
+
+## 🔑 Core ADK Concepts
+
+| Concept | Description |
+|---------|-------------|
+| **Agent** | LLM-powered building block that reasons, plans, and uses tools |
+| **Tools** | Extend agents beyond text — APIs, search, code execution |
+| **Session** | Manages conversation history and working memory |
+| **Runner** | Orchestrates execution flow and agent interactions |
+| **Callbacks** | Custom hooks for logging, validation, or behavior modification |
+| **Artifacts** | Binary data (files, images, PDFs) managed per session |
+
+---
+
+## 🧪 Example Interactions
+
+**Google Search Agent:**
+```
+User: What are some new movies released in India in the past month?
+Agent: [Uses Google Search → returns grounded, real-time results]
+```
+
+**LLM Auditor (Multi-Agent):**
+```
+User: Earth is further away from the Sun than Mars.
+critic_agent: [Fact-checks using Google Search — FALSE]
+reviser_agent: Earth is closer to the Sun than Mars.
+```
+
+---
+
+## 🏆 Skills Demonstrated
+
+- ✅ Multi-agent architecture design
+- ✅ Tool integration (Google Search / RAG)
+- ✅ Structured outputs with Pydantic
+- ✅ Sequential workflow orchestration
+- ✅ Execution trace debugging
+- ✅ Vertex AI authentication & deployment patterns
+- ✅ Three execution modes: UI · CLI · Python
+
+---
+
+## 📜 Lab Reference
+
+**Course:** Google Cloud GENAI104  
+**Lab:** Get Started with Agent Development Kit (ADK)  
+**Duration:** 1.5 hours · 7 Credits  
+
+---
+
+## 👨‍💻 Author
+
+**SURAM BHANU PRAKASH**  
+🔗 [GitHub](https://github.com/Bhanuprakash2580/Hands-On-Build-Agent-Development-Kit-ADK-)  
+💼 [LinkedIn](https://www.linkedin.com/in/your-linkedin-handle)
+
+---
+
+<p align="center">
+  <i>Built with 🔥 using Google Cloud ADK · Gemini 2.5 Flash · Vertex AI</i>
+</p>
