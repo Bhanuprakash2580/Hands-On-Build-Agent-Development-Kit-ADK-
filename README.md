@@ -71,58 +71,51 @@ adk_project/
 ### 🏗️ Project Structure (VS Code)
 > Organized project folders with modular agent design
 
-![Project Structure](assets/project-structure.png)
+![Project Structure](---<img width="2542" height="1345" alt="Screenshot 2026-03-18 155928" src="https://github.com/user-attachments/assets/75774240-b2a9-4c41-8b3d-cc730beb99d8" />)
 
----
 
 ### 🖥️ ADK Web UI Dashboard
 > Interactive interface to run, monitor, and inspect agents
 
-![Web UI](assets/web-ui.png)
+![Web UI](---<img width="2559" height="1348" alt="Screenshot 2026-03-18 160014" src="https://github.com/user-attachments/assets/d82e31a6-b56c-43d5-b2ce-cd25cef4435d" />)
 
----
 
 ### 🔎 Google Search Agent — Real-Time RAG
 > Tool usage with live data retrieval and search suggestions
 
-![Search Agent](assets/search-agent.png)
+![Search Agent](---<img width="2559" height="1354" alt="Screenshot 2026-03-18 160614" src="https://github.com/user-attachments/assets/7987a73b-bbc9-45ad-867c-5f8e662966c3" />)
 
----
 
 ### 📊 Execution Trace View
 > Internal execution flow for debugging latency and tool calls
 
-![Trace](assets/execution-trace.png)
+![Trace](<img width="842" height="1354" alt="Screenshot 2026-03-18 160759" src="https://github.com/user-attachments/assets/c65d73ec-a387-4594-b642-33720e3b1502" />)
 
 ---
 
 ### 💻 CLI Chat Interface
 > Quick agent interaction directly from the terminal
 
-![CLI](assets/cli.png)
+![CLI](---<img width="2559" height="1356" alt="Screenshot 2026-03-18 160247" src="https://github.com/user-attachments/assets/970393d0-2990-4c08-bc29-9e3c1aa60853" />)
 
----
 
 ### 🐍 Python Agent — Structured Output
 > Programmatic execution returning typed JSON via Pydantic schema
 
-![Python Output](assets/python-output.png)
+![Python Output](---<img width="2559" height="1212" alt="Screenshot 2026-03-18 160430" src="https://github.com/user-attachments/assets/c6ee04c5-31bc-4ed0-9f27-5516090fafc1" />)
 
----
 
 ### 🔁 Multi-Agent System — LLM Auditor
 > `critic_agent` detects errors · `reviser_agent` corrects output
 
-![Multi Agent](assets/multi-agent-output.png)
+![Multi Agent](---<img width="850" height="1340" alt="Screenshot 2026-03-18 160731" src="https://github.com/user-attachments/assets/fa7469fc-1285-4546-9211-b1658980b5f7" />)
 
----
 
 ### 🔄 Agent Workflow Graph
 > Visual representation of agent interactions and execution flow
 
-![Agent Graph](assets/agent-graph.png)
-
----
+![Agent Graph](---<img width="842" height="1354" alt="Screenshot 2026-03-18 160759" src="https://github.com/user-attachments/assets/d6082fc1-da6d-4c8c-90e7-e0083191a194" />
+)
 
 ## ⚙️ Prerequisites
 
@@ -249,7 +242,7 @@ reviser_agent: Earth is closer to the Sun than Mars.
 
 **SURAM BHANU PRAKASH**  
 🔗 [GitHub](https://github.com/Bhanuprakash2580/Hands-On-Build-Agent-Development-Kit-ADK-)  
-💼 [LinkedIn](https://www.linkedin.com/in/your-linkedin-handle)
+💼 [LinkedIn](https://www.linkedin.com/in/bhanuprakashsuram29/)
 
 ---
 
